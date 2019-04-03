@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Friend's Trivia</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Friend's Trivia</h1>
+    <p><button type="button" id="button">Let's get started</button></p>
+    <div id="fun"></div>
+
+
+    <script>
+
+        //define global variables
+        var your_score = 0;
+        var totalquestions = 4;
+        var object_friends = ["What does Joey do for a living?", "How many times was Ross married?", "What is the coffee place they all go to?", "How many roommates does Racheal have"];
+        var rand = object_friends[Math.floor(Math.random() * object_friends.length)];
+
+        //reset function
+
+        // functions
+
+        $("#button").on("click", function () {
+            $("#fun").html(rand);
+            $("button").hide("#button");
+        });
+
+        //main calls
+
+
+
+
+    </script>
+</body>
+
+</html>
