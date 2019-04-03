@@ -3,32 +3,70 @@
 <head>
     <title>Friend's Trivia</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1>Friend's Trivia</h1>
-    <p><button type="button" id="button">Let's get started</button></p>
-    <div id="fun"></div>
-
-
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <img src="https://i.etsystatic.com/8356319/r/il/7f3a91/1008856380/il_794xN.1008856380_719i.jpg">
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <div class="col-12">
+        </div>
+        <div class="col-12">
+            <p><button type="button" class="btn btn-primary btn-lg" id="button">Click Here to see if you know your F*R*I*E*N*D*S
+                TRIVIA!!!</button></p></div>
+                <div id="new_fun"></div>
+        </div>
+    </div>
     <script>
 
         //define global variables
         var your_score = 0;
         var totalquestions = 4;
-        var object_friends = ["What does Joey do for a living?", "How many times was Ross married?", "What is the coffee place they all go to?", "How many roommates does Racheal have"];
-        var rand = object_friends[Math.floor(Math.random() * object_friends.length)];
+        
 
+        var object_friends = [
+        {
+            question: "What does Joey do for a living?",
+            answers: ["He doesn't work", "He is an actor","He sells cars", "He is a dentist"],
+            correct_answers: "He is an actor"
+        },
+        {
+            question: "How many times has Ross been married",
+            answers: ["one","two","three","none"],
+            correct_answers: "three"
+        },
+        ]
+ 
+       // "What is the coffee place they all go to?", "How many roommates does Racheal have"];
         //reset function
 
         // functions
 
         $("#button").on("click", function () {
-            $("#fun").html(rand);
-            $("button").hide("#button");
+            $("#button").hide("#button");
+            $("#new_fun").html(object_friends[0].question);
+            $("#new_fun").append("<br>").append(object_friends[0].answers[0]);
+            $("#new_fun").append("<br>").append(object_friends[0].answers[1]);
+            $("#new_fun").append("<br>").append(object_friends[0].answers[2]);
+            $("#new_fun").append("<br>").append(object_friends[0].answers[3]);
+            
+        $("object_friends[0].answers[2]").on("click", function() {
+            console.log("hello");
         });
+    
+            
+        });
+
+
+
 
         //main calls
 
