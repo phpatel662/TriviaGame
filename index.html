@@ -1,79 +1,40 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-    <title>Friend's Trivia</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<title>Friends Trivia</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto" rel="stylesheet">
+
+	<!-- My CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"></link>
+
+	<!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+    <!-- Script -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <img src="https://i.etsystatic.com/8356319/r/il/7f3a91/1008856380/il_794xN.1008856380_719i.jpg">
-            </div>
-            <div class="col-4"></div>
-        </div>
-        <div class="col-12">
-        </div>
-        <div class="col-12">
-            <p><button type="button" class="btn btn-primary btn-lg" id="button">Click Here to see if you know your F*R*I*E*N*D*S
-                TRIVIA!!!</button></p></div>
-                <div id="new_fun"></div>
-        </div>
-    </div>
-    <script>
 
-        //define global variables
-        var your_score = 0;
-        var totalquestions = 4;
-        
+	<div class="container">
 
-        var object_friends = [
-        {
-            question: "What does Joey do for a living?",
-            answers: ["He doesn't work", "He is an actor","He sells cars", "He is a dentist"],
-            correct_answers: "He is an actor"
-        },
-        {
-            question: "How many times has Ross been married",
-            answers: ["one","two","three","none"],
-            correct_answers: "three"
-        },
-        ]
- 
-       // "What is the coffee place they all go to?", "How many roommates does Racheal have"];
-        //reset function
+	<h1 id="topText">FRIENDS Trivia</h1>
 
-        // functions
+	<div class="jumbotron text-center" id="gameScreen">
+		<h1 id="start">START</h1>
+	</div>
 
-        $("#button").on("click", function () {
-            $("#button").hide("#button");
-            $("#new_fun").html(object_friends[0].question);
-            $("#new_fun").append("<br>").append(object_friends[0].answers[0]);
-            $("#new_fun").append("<br>").append(object_friends[0].answers[1]);
-            $("#new_fun").append("<br>").append(object_friends[0].answers[2]);
-            $("#new_fun").append("<br>").append(object_friends[0].answers[3]);
-            
-        $("object_friends[0].answers[2]").on("click", function() {
-            console.log("hello");
-        });
-    
-            
-        });
+	<h2 id="bottomText" class="text-right">game on!</h2>
 
+	</div>
 
-
-
-        //main calls
-
-
-
-
-    </script>
 </body>
-
 </html>
